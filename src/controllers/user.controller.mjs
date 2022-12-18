@@ -9,6 +9,7 @@ import response from '../helpers/resolvedResponse.mjs'
 import { emailService, tokenService, userService } from '../services/index.mjs'
 import { sseActivateAccount } from '../routes/v1/sse.route.mjs'
 
+//Check email
 export const sendValidationEmail = catchAsync(async (req, res) => {
   const { user } = req
 
