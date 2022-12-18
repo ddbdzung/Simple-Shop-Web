@@ -26,6 +26,7 @@ const generateTableData = async data => {
   return { tableData, totalAmount }
 }
 
+//Show purchased products when sending to email
 export const orderConfirmation = async (userInfo, data) => {
   const orders = await generateTableData(data)
   return {
@@ -70,6 +71,8 @@ export const orderConfirmation = async (userInfo, data) => {
   `,
   }
 }
+
+//Link password retrieval
 export const verifyAccount = token => ({
   subject: 'Verify your Simple Web\'s account',
   text: `Click to this link ${validateURL(token)} to verify your account`,
@@ -90,6 +93,7 @@ export const verifyAccount = token => ({
   `,
 })
 
+//OTP
 export const resetPw = code => ({
   subject: 'Reset your Simple Web\'s password',
   text: `Copy this OTP code ${code} to reset your password. If there are some mistake, ignore this email.`,
