@@ -1,9 +1,11 @@
 # Simple Shop Web
 
 Install: 
+
 ``
 npm i -g pnpm
-
+``
+``
 pnpm install
 ``
 
